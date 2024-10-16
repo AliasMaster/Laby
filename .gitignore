@@ -1,3 +1,5 @@
-/_release
-/_debug
-/.vscode
+_release/
+_debug/
+.vscode/
+
+*.o

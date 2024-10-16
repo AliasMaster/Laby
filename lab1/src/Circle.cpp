@@ -9,11 +9,12 @@ RelativePostion circlesLocation(const Circle& c1, const Circle& c2) {
     double r1 = c1.getRadius();
     double r2 = c2.getRadius();
     
-    if(dist > r1 + r2) return RelativePostion::externallyDisconnected;
-    if(dist == r1 + r2) return RelativePostion::touchingExternally;
-    if(dist > fabs(r1 - r2)) return RelativePostion::intersecting;
+    if(dist == 0) return RelativePostion::concentric;
     if(dist == fabs(r1 - r2)) return RelativePostion::touchingInternally;
+    if(dist == r1 + r2) return RelativePostion::touchingExternally;
     if(dist < fabs(r1 - r2)) return RelativePostion::internallyDisconnected;
+    if(dist > r1 + r2) return RelativePostion::externallyDisconnected;
+    
+    return RelativePostion::intersecting;
 
-    return RelativePostion::concentric;
 }

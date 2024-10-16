@@ -4,14 +4,9 @@
 
 int main() {
     Circle c1(2, 0, 0);
-    Circle c2(c1);
+    Circle c2(12, 0, 0);
 
-    c2.setCenter({0, 0});
-    c2.setRadius(12);
-
-    Circle c3(15, 0, 0);
-
-    RelativePostion rp = circlesLocation(c1, c3);
+    RelativePostion rp = circlesLocation(c1, c2);
 
     switch (rp) {
     
@@ -41,13 +36,6 @@ int main() {
 
     for(int i = 0; i < arr.getSize(); ++i) {
         std::cout << arr.getArray()[i] << "\t";
-    }
-    std::cout << std::endl;
-
-    DynamicArray arr2(arr);
-
-    for(int i = 0; i < arr2.getSize(); ++i) {
-        std::cout << arr2.getArray()[i] << "\t";
     }
     std::cout << std::endl;
 
