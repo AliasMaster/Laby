@@ -10,29 +10,29 @@ int main() {
 
     switch (rp) {
     
-    case RelativePostion::concentric:
-        std::cout << "Okregi wspolsrodkowe\n";
-        break;
-    case RelativePostion::externallyDisconnected:
-        std::cout << "Okregi rozlaczne zewnetrznie\n";
-        break;
-    case RelativePostion::internallyDisconnected:
-        std::cout << "Okregi rozlaczne wewnetrzenie\n";
-        break;
-    case RelativePostion::intersecting:
-        std::cout << "Okregi precinaja sie\n";
-        break;
-    case RelativePostion::touchingExternally:
-        std::cout << "Okregi styczne zewnetrzenie\n";
-        break;
-    case RelativePostion::touchingInternally:
-        std::cout << "Okregi styczne wewnetrzenie\n";
-        break;
-    default:
-        break;
+        case RelativePostion::concentric:
+            std::cout << "Okregi wspolsrodkowe\n";
+            break;
+        case RelativePostion::externallyDisconnected:
+            std::cout << "Okregi rozlaczne zewnetrznie\n";
+            break;
+        case RelativePostion::internallyDisconnected:
+            std::cout << "Okregi rozlaczne wewnetrzenie\n";
+            break;
+        case RelativePostion::intersecting:
+            std::cout << "Okregi precinaja sie\n";
+            break;
+        case RelativePostion::touchingExternally:
+            std::cout << "Okregi styczne zewnetrzenie\n";
+            break;
+        case RelativePostion::touchingInternally:
+            std::cout << "Okregi styczne wewnetrzenie\n";
+            break;
+        default:
+            break;
     }
 
-    DynamicArray arr(10, 5);
+    DynamicArray arr(15, 5);
 
     for(int i = 0; i < arr.getSize(); ++i) {
         std::cout << arr.getArray()[i] << "\t";
